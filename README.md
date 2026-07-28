@@ -16,6 +16,7 @@ A beginner Python calculator that performs:
 - User input
 - if-elif-else statements
 - Basic arithmetic operators
+- While Loops
 
 ## How to Run
 
