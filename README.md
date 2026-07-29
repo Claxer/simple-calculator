@@ -7,6 +7,9 @@ A beginner Python calculator that performs:
 - Subtraction
 - Multiplication
 - Division
+- Exponent
+- Modulus
+- Floor Division
 
 ## Technologies
 - Python 3
@@ -16,7 +19,17 @@ A beginner Python calculator that performs:
 - User input
 - if-elif-else statements
 - Basic arithmetic operators
-- While Loops
+- While loops
+- try-except error handling
+- ValueError exception handling
+- Input validation
+- Comparison operators (==, !=)
+- Membership operator (`in`)
+- Preventing division by zero
+- Menu-driven program design
+- Using `continue` and `break` to control program flow
+- Converting data types using `float()`
+- String methods such as `.lower()`
 
 ## How to Run
 
