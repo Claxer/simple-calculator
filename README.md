@@ -10,6 +10,7 @@ A beginner Python calculator that performs:
 - Exponent
 - Modulus
 - Floor Division
+- History
 
 ## Technologies
 - Python 3
@@ -30,6 +31,10 @@ A beginner Python calculator that performs:
 - Using `continue` and `break` to control program flow
 - Converting data types using `float()`
 - String methods such as `.lower()`
+- Lists
+- Using `list.append()` to store data
+- Using `for` loops to display stored data
+- Recording and displaying calculation history
 
 ## How to Run
 
