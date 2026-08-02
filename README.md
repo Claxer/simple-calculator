@@ -1,7 +1,7 @@
-# Simple Calculator
+# Calculator
 
 ## Description
-A beginner Python calculator that performs:
+A Python calculator that performs:
 
 - Addition
 - Subtraction
@@ -10,7 +10,9 @@ A beginner Python calculator that performs:
 - Exponent
 - Modulus
 - Floor Division
-- History
+- View History
+- Clear History
+- Save History
 
 ## Technologies
 - Python 3
@@ -35,6 +37,13 @@ A beginner Python calculator that performs:
 - Using `list.append()` to store data
 - Using `for` loops to display stored data
 - Recording and displaying calculation history
+- Writing data to a text file
+- Reading data from a text file
+- File handling using `open()`
+- Using different file modes (`"r"`, `"w"`, and `"a"`)
+- Using `with open()` to safely handle files
+- Organizing calculations into a history log
+- Using nested loops for menu navigation
 
 ## How to Run
 
