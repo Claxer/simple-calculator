@@ -1,4 +1,4 @@
-# Calculator
+# My First work, a Calculator
 
 ## Description
 A Python calculator that performs:
