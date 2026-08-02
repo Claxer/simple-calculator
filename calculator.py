@@ -12,21 +12,41 @@ while True:
     print("6. Modulus")
     print("7. Floor Division")
     print("8. View History")
+    print("9. Clear History")
+    print("10. Save History")
     print("==============================")
 
-    choice = input("Choose an operation (1-8): ")
+    choice = input("Choose an operation (1-10): ")
 
-    # View History
     if choice == "8":
-        print("\n========== HISTORY ==========")
-
         if len(history) == 0:
             print("No calculations yet.")
         else:
             for item in history:
                 print(item)
 
-        print("=============================")
+        print("==============================")
+
+    elif choice == "9":
+        history.clear()
+        print("\n==============================")
+        print("History cleared successfully.")
+        print("==============================")
+
+    elif choice == "10":
+
+        with open("history.txt", "w") as file:
+
+            if len(history) == 0:
+                file.write("No calculations yet.\n")
+
+            else:
+                for item in history:
+                    file.write(item + "\n")
+
+        print("\n==============================")
+        print("History saved to history.txt")
+        print("==============================")
 
     elif choice in ["1", "2", "3", "4", "5", "6", "7"]:
 
