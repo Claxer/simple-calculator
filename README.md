@@ -10,6 +10,7 @@ A Python calculator that performs:
 - Exponent
 - Modulus
 - Floor Division
+- Square Root
 - View History
 - Clear History
 - Save History
