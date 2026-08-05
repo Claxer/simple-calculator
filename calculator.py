@@ -1,3 +1,5 @@
+import math
+
 history = []
 
 while True:
@@ -11,14 +13,15 @@ while True:
     print("5. Exponent")
     print("6. Modulus")
     print("7. Floor Division")
-    print("8. View History")
-    print("9. Clear History")
-    print("10. Save History")
+    print("8. Square Root")
+    print("9. View History")
+    print("10. Clear History")
+    print("11. Save History")
     print("==============================")
 
-    choice = input("Choose an operation (1-10): ")
+    choice = input("Choose an operation (1-11): ")
 
-    if choice == "8":
+    if choice == "9":
         if len(history) == 0:
             print("No calculations yet.")
         else:
@@ -27,13 +30,13 @@ while True:
 
         print("==============================")
 
-    elif choice == "9":
+    elif choice == "10":
         history.clear()
         print("\n==============================")
         print("History cleared successfully.")
         print("==============================")
 
-    elif choice == "10":
+    elif choice == "11":
 
         with open("history.txt", "w") as file:
 
@@ -48,11 +51,30 @@ while True:
         print("History saved to history.txt")
         print("==============================")
 
-    elif choice in ["1", "2", "3", "4", "5", "6", "7"]:
+    elif choice in ["1", "2", "3", "4", "5", "6", "7", "8"]:
+
+        if choice == "8":
+            try:
+                num = float(input("Enter a number: "))
+
+                if num < 0:
+                    print("Error: Cannot find the square root of a negative number.")
+                else:
+                    answer = math.sqrt(num)
+                    print("Answer:", answer)
+                    history.append(f"√{num} = {answer}")
+
+            except ValueError:
+                print("\n==============================")
+                print("Invalid input. Please enter a number.")
+                print("==============================")
+
+            continue
 
         try:
             num1 = float(input("Enter the first value: "))
             num2 = float(input("Enter the second value: "))
+
         except ValueError:
             print("\n==============================")
             print("Invalid input. Please enter numbers only.")
