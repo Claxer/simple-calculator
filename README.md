@@ -1,56 +1,88 @@
-# My First work, a Calculator
+# My First Work, a Scientific Calculator
 
 ## Description
-A Python calculator that performs:
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Exponent
-- Modulus
-- Floor Division
-- Square Root
-- View History
-- Clear History
-- Save History
+A Python-based scientific calculator that performs a variety of mathematical operations through a menu-driven interface.
 
-## Technologies
-- Python 3
+### Features
+
+#### Basic Operations
+
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Exponent
+* Modulus
+* Floor Division
+
+#### Scientific Functions
+
+* Square Root
+* Percentage
+* Factorial
+* Cube Root
+* Absolute Value
+* Reciprocal (1/x)
+* Pi (π)
+* Euler's Number (e)
+
+#### History Management
+
+* View History
+* Clear History
+* Save History to a Text File
+
+## Technologies Used
+
+* Python 3
+* Python `math` Module
 
 ## What I Learned
-- Variables
-- User input
-- if-elif-else statements
-- Basic arithmetic operators
-- While loops
-- try-except error handling
-- ValueError exception handling
-- Input validation
-- Comparison operators (==, !=)
-- Membership operator (`in`)
-- Preventing division by zero
-- Menu-driven program design
-- Using `continue` and `break` to control program flow
-- Converting data types using `float()`
-- String methods such as `.lower()`
-- Lists
-- Using `list.append()` to store data
-- Using `for` loops to display stored data
-- Recording and displaying calculation history
-- Writing data to a text file
-- Reading data from a text file
-- File handling using `open()`
-- Using different file modes (`"r"`, `"w"`, and `"a"`)
-- Using `with open()` to safely handle files
-- Organizing calculations into a history log
-- Using nested loops for menu navigation
+
+* Variables
+* User input
+* Menu-driven program design
+* `if`, `elif`, and `else` statements
+* While loops
+* `continue` and `break` statements
+* Functions from Python's `math` module
+* Basic arithmetic operators
+* Exponentiation (`**`)
+* Modulus (`%`)
+* Floor division (`//`)
+* Calculating square roots
+* Calculating cube roots
+* Calculating factorials
+* Using mathematical constants (`math.pi` and `math.e`)
+* Calculating percentages
+* Finding absolute values
+* Calculating reciprocals
+* Error handling using `try` and `except`
+* `ValueError` exception handling
+* Input validation
+* Preventing division by zero
+* Comparison operators (`==`, `!=`, `<`, `>`)
+* Membership operator (`in`)
+* Type conversion using `float()` and `int()`
+* String methods such as `.lower()`
+* Lists
+* Using `list.append()` to store calculation history
+* Using `for` loops to display stored data
+* Writing data to a text file
+* File handling using `open()`
+* Using different file modes (`"w"`)
+* Using `with open()` for safe file handling
+* Recording and managing calculation history
+* Building a console-based scientific calculator
 
 ## How to Run
 
-1. Download the repository.
-2. Open terminal.
-3. Run:
+1. Clone or download this repository.
+2. Open a terminal or command prompt.
+3. Navigate to the project folder.
+4. Run:
 
-```
+```bash
 python calculator.py
+```
