@@ -14,14 +14,21 @@ while True:
     print("6. Modulus")
     print("7. Floor Division")
     print("8. Square Root")
-    print("9. View History")
-    print("10. Clear History")
-    print("11. Save History")
+    print("9. Percentage")
+    print("10. Factorial")
+    print("11. Cube Root")
+    print("12. Absolute Value")
+    print("13. Reciprocal (1/x)")
+    print("14. Pi (π)")
+    print("15. Euler's Number (e)")
+    print("16. View History")
+    print("17. Clear History")
+    print("18. Save History")
     print("==============================")
 
-    choice = input("Choose an operation (1-11): ")
+    choice = input("Choose an operation (1-18): ")
 
-    if choice == "9":
+    if choice == "16":
         if len(history) == 0:
             print("No calculations yet.")
         else:
@@ -30,13 +37,13 @@ while True:
 
         print("==============================")
 
-    elif choice == "10":
+    elif choice == "17":
         history.clear()
         print("\n==============================")
         print("History cleared successfully.")
         print("==============================")
 
-    elif choice == "11":
+    elif choice == "18":
 
         with open("history.txt", "w") as file:
 
@@ -51,7 +58,7 @@ while True:
         print("History saved to history.txt")
         print("==============================")
 
-    elif choice in ["1", "2", "3", "4", "5", "6", "7", "8"]:
+    elif choice in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]:
 
         if choice == "8":
             try:
@@ -68,6 +75,118 @@ while True:
                 print("\n==============================")
                 print("Invalid input. Please enter a number.")
                 print("==============================")
+
+            continue
+
+        if choice == "9":
+            try:
+                num = float(input("Enter a number: "))
+
+                answer = num / 100
+
+                print("Answer:", answer)
+
+                history.append(f"{num}% = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "10":
+            try:
+                num = float(input("Enter a whole number: "))
+
+                if num < 0:
+                    print("Error: Factorial cannot be calculated for negative numbers.")
+
+                elif num != int(num):
+                    print("Error: Factorial only works with whole numbers.")
+
+                else:
+                    answer = math.factorial(int(num))
+
+                    print("Answer:", answer)
+
+                    history.append(f"{int(num)}! = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "11":
+            try:
+                num = float(input("Enter a number: "))
+
+                if num >= 0:
+                    answer = num ** (1 / 3)
+                else:
+                    answer = -((-num) ** (1 / 3))
+
+                print("Answer:", answer)
+
+                history.append(f"∛{num} = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "12":
+            try:
+                num = float(input("Enter a number: "))
+
+                answer = abs(num)
+
+                print("Answer:", answer)
+
+                history.append(f"|{num}| = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "13":
+            try:
+                num = float(input("Enter a number: "))
+
+                if num == 0:
+                    print("Error: Cannot divide by zero.")
+                else:
+                    answer = 1 / num
+
+                    print("Answer:", answer)
+
+                    history.append(f"1/{num} = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "14":
+            answer = math.pi
+
+            print("π =", answer)
+
+            history.append(f"π = {answer}")
+
+            continue
+
+        if choice == "15":
+            try:
+                num = float(input("Enter a number: "))
+
+                answer = math.e * num
+
+                print("Answer:", answer)
+
+                history.append(f"e × {num} = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
 
             continue
 
