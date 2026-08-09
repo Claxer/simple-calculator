@@ -21,14 +21,19 @@ while True:
     print("13. Reciprocal (1/x)")
     print("14. Pi (π)")
     print("15. Euler's Number (e)")
-    print("16. View History")
-    print("17. Clear History")
-    print("18. Save History")
+    print("16. Logarithm (log₁₀)")
+    print("17. Natural Logarithm (ln)")
+    print("18. Sine (sin)")
+    print("19. Cosine (cos)")
+    print("20. Tangent (tan)")
+    print("21. View History")
+    print("22. Clear History")
+    print("23. Save History")
     print("==============================")
 
-    choice = input("Choose an operation (1-18): ")
+    choice = input("Choose an operation (1-23): ")
 
-    if choice == "16":
+    if choice == "21":
         if len(history) == 0:
             print("No calculations yet.")
         else:
@@ -37,13 +42,13 @@ while True:
 
         print("==============================")
 
-    elif choice == "17":
+    elif choice == "22":
         history.clear()
         print("\n==============================")
         print("History cleared successfully.")
         print("==============================")
 
-    elif choice == "18":
+    elif choice == "23":
 
         with open("history.txt", "w") as file:
 
@@ -58,7 +63,7 @@ while True:
         print("History saved to history.txt")
         print("==============================")
 
-    elif choice in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]:
+    elif choice in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]:
 
         if choice == "8":
             try:
@@ -184,6 +189,87 @@ while True:
                 print("Answer:", answer)
 
                 history.append(f"e × {num} = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "16":
+            try:
+                num = float(input("Enter a positive number: "))
+
+                if num <= 0:
+                    print("Error: Logarithm is only defined for numbers greater than zero.")
+                else:
+                    answer = math.log10(num)
+
+                    print("Answer:", answer)
+
+                    history.append(f"log({num}) = {answer}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "17":
+            try:
+                num = float(input("Enter a positive number: "))
+
+                if num <= 0:
+                    print("Error: Natural logarithm is only defined for numbers greater than zero.")
+                else:
+                    answer = math.log(num)
+
+                    print("Answer:", round(answer, 10))
+
+                    history.append(f"ln({num}) = {round(answer, 10)}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "18":
+            try:
+                angle = float(input("Enter an angle in degrees: "))
+
+                answer = math.sin(math.radians(angle))
+
+                print("Answer:", round(answer, 10))
+
+                history.append(f"sin({angle}°) = {round(answer, 10)}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "19":
+            try:
+                angle = float(input("Enter an angle in degrees: "))
+
+                answer = math.cos(math.radians(angle))
+
+                print("Answer:", round(answer, 10))
+
+                history.append(f"cos({angle}°) = {round(answer, 10)}")
+
+            except ValueError:
+                print("Invalid input.")
+
+            continue
+
+        if choice == "20":
+            try:
+                angle = float(input("Enter an angle in degrees: "))
+
+                answer = math.tan(math.radians(angle))
+
+                print("Answer:", round(answer, 10))
+
+                history.append(f"tan({angle}°) = {round(answer, 10)}")
 
             except ValueError:
                 print("Invalid input.")
